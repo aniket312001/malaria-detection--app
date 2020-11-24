@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction</title>
+
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <center>
+        <div class='cont'>
+            
+            {% if data1 == 1 %}   
+            <h1>It is uninfected Cell</h1>
+
+            {%else%}
+            
+            <h1>It is parasitized Cell</h1>
+            {%endif%}
+
+        </div>
+        <!-- probability -->
+        {% if data1 == 1 %}   
+            <h1>probability<br> uninfected: <span>{{data2}}</span><br>parasitized: <span>{{1-data2}}</span><br> </h1>
+        {% else %}    
+            <h1>probability<br> uninfected: <span>{{data2}}</span><br>parasitized: <span>{{1+data2}}</span><br> </h1>
+        {% endif %}
+
+        <img src="{{url_for('load_img')}}" alt='img'>
+        <a href="/" class='btn'>go back</a>
+
+    </center>
+    
+</body>
+</html>

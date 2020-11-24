@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <center>
+        <div class='cont'>
+            <h2>WELCOME<br> To Malaria Detection  uninfected-parasitized Cell PREDICTION</h2>
+        </div>
+        
+        <!-- image input file -->
+        <form method="POST" action="{{url_for('home')}}" enctype="multipart/form-data">  
+            <input type="file" name='image' class='btn'><br><br><br>
+            <input type="submit" class='btn'>
+        </form>
+
+    </center>
+
+</body>
+</html>
